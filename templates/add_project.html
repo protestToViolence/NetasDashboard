@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Project</title>
+</head>
+<body>
+    <h1>Add Project</h1>
+    <form method="POST">
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Status: 
+            <select name="status" required>
+                <option value="Completed">Completed</option>
+                <option value="In Progress">In Progress</option>
+            </select>
+        </label><br>
+        <label>Success Rate: <input type="number" name="success_rate" step="0.1" required></label><br>
+        <input type="submit" value="Add Project">
+    </form>
+</body>
+</html>

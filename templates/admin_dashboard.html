@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <h2>Politicians</h2>
+    <ul>
+    {% for politician in politicians %}
+        <li>{{ politician.name }} ({{ politician.party }}) - Age: {{ politician.age }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('add_politician') }}">Add Politician</a>
+    
+    <h2>Projects</h2>
+    <ul>
+    {% for project in projects %}
+        <li>{{ project.name }} - Status: {{ project.status }}, Success Rate: {{ project.success_rate }}%</li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('add_project') }}">Add Project</a>
+</body>
+</html>
